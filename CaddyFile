@@ -1,0 +1,5 @@
+:80 {
+	file_server {
+        hide .git* Caddyfile
+    }
+}

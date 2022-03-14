@@ -18,9 +18,9 @@
 	Referrer-Policy strict-origin-when-cross-origin
 	
 	#prevent the use of sensitive permissions
-	Permissions-Policy geolocation=(), camera()
+	Permissions-Policy "geolocation=(), camera()"
 	
 	#allow just licensed fonts and local resources
-	Content-Security-Policy default-src 'self' *.typekit.net
+	Content-Security-Policy "default-src 'self' *.typekit.net"
     }
 }

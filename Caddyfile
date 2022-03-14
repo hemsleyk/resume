@@ -3,6 +3,9 @@
     file_server {
         hide .git* Caddyfile README.md
     }
+    header assets/* {
+    	Cache-Control max-age=3600
+    }
     header {
         Cache-Control max-age=300
         
@@ -18,9 +21,9 @@
 	Referrer-Policy strict-origin-when-cross-origin
 	
 	#prevent the use of sensitive permissions
-	Permissions-Policy "geolocation=(), camera()"
+	Permissions-Policy "geolocation=(), camera=()"
 	
 	#allow just licensed fonts and local resources
-	Content-Security-Policy "default-src 'self' *.typekit.net"
+	Content-Security-Policy "default-src 'self' *.typekit.net img-src 'self' data: script-src 'sha256-Fm1JYCvGe3Cw383VEoEF233KYc72sUPOlj3fv5Vumv0=' 'sha256-lhyXYlsNf3/otQcsNaK8KeZqrJIrlTFTP/vt/E3esNU=' 'sha256-dJ8thYlQL5mnPbthy1pAq5a1G3g+3RNqP0Rpxatjci8=' 'sha256-Nzx9EXHQt3zDpog5cgZJ7wIw1kxwre1kP5kxt92DnkE='"
     }
 }

@@ -9,6 +9,18 @@
 	Strict-Transport-Security max-age=30
 	
         # clickjacking protection
-	    X-Frame-Options DENY
+	X-Frame-Options DENY
+	    
+    	#drop MIME sniffing
+    	X-Content-Type-Options nosniff
+	
+	#referrer policy for analytics
+	Referrer-Policy strict-origin-when-cross-origin
+	
+	#prevent the use of sensitive permissions
+	Permissions-Policy geolocation=(), camera()
+	
+	#allow just licensed fonts and local resources
+	Content-Security-Policy: default-src 'self' *.typekit.net
     }
 }

@@ -9,5 +9,6 @@
         # clickjacking protection
 	    X-Frame-Options DENY
     }
+    header /assets/icons/* Cache-Control max-age=31536000
     header /assets/* Cache-Control max-age=31536000
 }

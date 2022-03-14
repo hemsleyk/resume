@@ -3,7 +3,7 @@
     file_server {
         hide .git* Caddyfile README.md
     }
-    header assets/* {
+    header /assets/* {
     	Cache-Control max-age=3600
     }
     header {

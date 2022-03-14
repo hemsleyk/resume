@@ -4,7 +4,7 @@
         hide .git* Caddyfile README.md
     }
     header {
-        Cache-Control max-age=3600
+        Cache-Control max-age=2592000
         
 	Strict-Transport-Security max-age=30
 	
